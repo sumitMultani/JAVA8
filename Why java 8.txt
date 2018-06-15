@@ -13,3 +13,16 @@ lambda expression is anonymous function.
      i.  not having name.
 	 ii. not having modifier.
 	 iii.not having any return type.
+	 
+Functional Interface (SAM)
+     1.if the interface contains only Single abstract method(SAM).
+	 Ex. - Runnable        --> contains only run() method
+	       Callable        --> contains only call() method
+	       ActionListener  --> contains only actionPerformed()
+	       Comparable      --> contains only compareTo() method.
+		 
+In java8 we can declare any number of default or static methods , but only one abstract method in functional interface.		
+
+Q.: what is the purpose of @FunctionalInterface ?
+A : Restriction only for abstract method.
+ 
