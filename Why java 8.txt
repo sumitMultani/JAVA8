@@ -1,0 +1,15 @@
+To simplify programming.
+To utilize functional programming benefits in java.( Lambda Expression)
+To enable parallel programming.( Stream API)
+
+Lambda Expression(LISP 1st)
+--------------------------
+To enable functional programming in java .
+To write more readable , maintainable, & concise code.
+To use API's very easily and effectively.
+To enable parallel processing .
+
+lambda expression is anonymous function. 
+     i.  not having name.
+	 ii. not having modifier.
+	 iii.not having any return type.
