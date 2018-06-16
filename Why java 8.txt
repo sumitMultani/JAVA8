@@ -1,25 +1,26 @@
-To simplify programming.
-To utilize functional programming benefits in java.( Lambda Expression)
-To enable parallel programming.( Stream API)
+Q : Benefits of JAVA8 ?
+A : To simplify programming.
+    To utilize functional programming benefits in java.( Lambda Expression)
+    To enable parallel programming.( Stream API)
 
-Lambda Expression(LISP 1st)
---------------------------
-To enable functional programming in java .
-To write more readable , maintainable, & concise code.
-To use API's very easily and effectively.
-To enable parallel processing .
 
-lambda expression is anonymous function. 
-     i.  not having name.
-	 ii. not having modifier.
-	 iii.not having any return type.
-	 
+Q: What is Lambda Expression in java ? and Why we need to use in java?
+A : 
+	Lambda Expression(LISP 1st)
+	--------------------------
+	To enable functional programming in java .
+	To write more readable , maintainable, & concise code.
+	To use API's very easily and effectively.
+	To enable parallel processing .
+
+
+Q : What is an Functional Interface ?	 
 Functional Interface (SAM)
      1.if the interface contains only Single abstract method(SAM).
-	 Ex. - Runnable        --> contains only run() method
-	       Callable        --> contains only call() method
-	       ActionListener  --> contains only actionPerformed()
-	       Comparable      --> contains only compareTo() method.
+	 Example. - Runnable        --> contains only run() method
+	            Callable        --> contains only call() method
+	            ActionListener  --> contains only actionPerformed()
+	            Comparable      --> contains only compareTo() method.
 		 
 In java8 we can declare any number of default or static methods , but only one abstract method in functional interface.		
 
