@@ -1,0 +1,667 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<br /></div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content=" width=device-width , initial-scale=1, maximum-scale=1"/>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1866019745595988",
+          enable_page_level_ads: true
+     });
+</script>
+ 
+ 
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('COREJAVA', this, '#555')" id="defaultOpen">CORE JAVA</button>
+<button class="tablink" onclick="openPage('HIBERNATE', this, '#555')" >HIBERNATE</button>
+<button class="tablink" onclick="openPage('SPRING', this, '#555')">SPRING</button>
+<button class="tablink" onclick="openPage('ABOUTUS', this, '#555')">APACHE KAFKA</button>
+<button class="tablink" onclick="openPage('APACHESTORM', this, '#555')">APACHE STORM</button>
+
+<div id="COREJAVA" class="tabcontent">
+  <h3 align="center"><u>CORE JAVA INTERVIEW QUESTIONS AND ANSWERS</u></h3>
+  <br/><b>1. Q : WHAT IS DATA HIDDING ?</b>
+  <p>ANS : Hiding of the data so that outside person can't access our data directly.
+  <br/>
+  By Using private modifier we can implement data hiding.
+  <br/>Ex : <br/><br/>class Account {
+<br/>private double balance =1000;<br/>
+}<br/><br/>The main advantage of Data Hiding is we can achieve security.  </p>
+
+<br/><br/>
+<b>2. Q : WHAT IS DATA ABSTRACTION ? </b>
+<p>ANS : Hiding internal implementation details & just highlight the set of services . What we are offering is called abstraction.
+<br/> Ex : <br/><br/> Bank ATM Machine.<br/><br/>By using interfaces & abstract classes we can achieve abstraction.<br/><br/>
+The main advantage of abstraction are :<br/><br/> <ul><li>1. We can achieve security as no one is allowed to known our internal implementation.<li/>
+<li>2. Without effecting outside person we can change our internal implementation. Hence Enhancement will become very easy.</li></ul>
+</p>
+
+<br/><b>3.Q : WHAT IS ENCAPSULATION ? </b>
+<p>ANS : Encapsulating data & corresponding methods into a single module is known as encapsulation.
+<br/><br/>If any java class follows Data Hiding and Abstraction such type of class is said to Encapsulated class.
+<br/><br/>Encapsulation = Data Hiding + Abstarction.
+<br/><br/>
+class Account {
+<br/>privte double balance;
+<br/>// setter & getter methods.
+<br/>//....
+<br/>}<br/>
+Hidind data behind method is central concept of Encapsulation.
+</p><br/>
+<b>4. Q : WHAT IS INHERITANCE ? </b>
+<p>ANS : By Using extends keyword we can implement Inheritane (IS-A) Relationship.
+<br/> The main advantage of IS-A relationship is reusability of the code. <br/>
+<br/>Example : <br/><br/>
+class P {
+<br/>  public void m1(){<br/>//-------</br>}
+<br/>}
+<br/>class C extends P { </br>
+ public void m2() { <br/>
+ //--------<br/>
+ }<br/> }
+ 
+ <br/>
+ class Test { </br>
+ {<br/>
+  public static void main(string[] args {<br/>
+   P p = new P(); <br/>
+   p.m1();// work fine<br/>
+   p.m2(); // CompilationError : cannot find symbol . symbol : method m2() <br/><br/>
+  
+   C c = new C();<br/>
+   c.m1(); // work fine.<br/>
+   c.m2(); // work fine.<br/><br/>
+  
+   P p1 = new C();<br/>
+   p1.m1(); // work fine<br/>
+   p1.m2(); // CompilationError : <br/><br/>
+   
+   C c1= new P(); // Incompatible types. found : P required :C
+  </p>
+  <b>5. Q : WHAT IS HAS-A RELATIONSHIP ?</b>
+  <p>ANS : HAS-A Relationship is also known as Composition or Aggregation.
+  <br/>There is no specific keyword to implement HAS-A Relationship the mostly we are using "new" keyword.
+  <br/>The main advantage of HAS-A relationship is reusability.
+  <br/><br/>class Car {
+  <br/>Engine engine = new Engine();
+  <br/>}
+  <br/><br/>class Engine {
+  </br>//Engine specific functionality.
+  <br/>}
+  <br/><br/> The main disadvantage of HAS-A Relationship is it increases dependency between the classes and creates maintenance problems.</p>
+  <b>6. Q : WHAT IS POLYMORPHISM ?</b>
+  <p>ANS : Same name with different form is the concept of polymorphism.
+  <br/><br/>Types Of Polymorphism :
+  <br/><ul>
+  <li>1. Compille/static/earlybinding : <ul><li>a. overloading</li><li>b. method hiding</li></ul></li>
+  <li>1. Runtime/dynamic/latebinding : <ul><li>a. overriding</li></ul></li>
+  </ul>
+  </p>
+  <b>7. Q : WHAT IS METHOD OVERLOADING ? </b>
+  <p>ANS : Two methods are said to be overloaded if method names are same but arguments are different.
+  <br/>class Test { <br/>
+  public void m1(StringBuffer sb) {
+  <br/>System.out.println("StringBuffer-arg");
+  <br/>}
+  <br/>public void m1(String str) {
+  <br/>System.out.println("String-version");
+  <br/>}
+  <br/><br/>
+  public static void main(String[] args) {
+  <br/>Test t = new Test();
+  <br/>t.m1(new StringBuffer("java"));
+  <br/>t.m1("java");
+  <br>t.m1(null);<br/>}
+  <br/>}
+  <br/><br/>In overloading method resolution always takes care by compiler based on reference type. <br/>
+  Hence overloading is also considered as compiletime polymorphism or static polymorphism or early binding.
+   </p>
+   <b>8. Q : WHAT IS METHOD OVERRIDING ? AND RULES FOR METHOD OVERRIDING ?</b>
+   <p>ANS : If two methods have same name and same arguments type is known as method overriding.
+   <br/>Method overriding is possible only in case of Inheritance.
+   <br/>Hence overriding is also known as runtime polymorphism or dynamic polymorphism or late binding.
+   <br/><br/>
+   class P {
+   <br/>public object m1() {
+   <br/> return null;
+   <br/>}
+   <br/>}<br/><br/>
+   class C extends P {
+   <br/>public String m1(){
+   <br/>return null;
+   <br/>}
+   <br/>}
+   </p>
+   <b>9. Q : WHAT IS THE DIFFERENCE BETWEEN METHOD OVERRIDING AND METHOD HIDING?</b>
+   <p>ANS : 
+   <table style="width:100%" border : 1px>
+   <tr><th>METHOD OVERRIDING</th><th colspan="2">METHOD HIDING</th></tr>
+   <tr><td>1. Both parent and child class method should be non static. </td><td>1. Both parent and child class method shoul be static. </td></tr>
+   <tr><td>2. Method resolution is always take care by JVM based on runtime object.</td><td>2. Method resolution is always takes care by compiler based on reference type.</td></tr>
+   <tr><td>3. Overriding is also considered as runtime polymorphism (or) dynamic polymorphism (or) late binding.</td><td>3. Method hiding is also considered as compile time polymorphism
+    (or) static polymorphism (or) early binding.</td></tr>
+   </table></p>
+   
+   <b>9. Q : WHAT IS THE DIFFERENCE BETWEEN ArrayList l = new ArrayList(); AND List l = new ArrayList();?</b>
+   <p>ANS : 
+   <table style="width:100%" border : 1px>
+   <tr><th>ArrayList l = new ArrayList();</th><th colspan="2" style="width:50%">List l = new ArrayList();</th></tr>
+   <tr><td>1. Child c = new Child(); </td><td>1. Parent p = new Child(); </td></tr>
+   <tr><td>2. If we know runtime object type exactly then we have to used this approach.</td><td>2. If we don't know exact runtime object type then we have to used this approach.</td></tr>
+   <tr><td>3. By using child reference we can call both parent & child class methods.</td><td>3. By using parent reference we can call only method available in parent class
+     and child specific method we can't call.</td></tr>
+   </table></p>
+</div>
+
+<div id="HIBERNATE" class="tabcontent">
+  <h3 align="center"><u>HIBERNATE INTERVIEW QUESTIONS AND ANSWERS</u></h3>
+  <br/><b>1. Q : WHAT IS HIBERNATE ?</b>
+  <p>ANS : It is an open source, light weight, non-invasive, java based ORM Framework.
+
+ To develop Object based DataBase S/w independent O-R Mapping, persistence logic in all kind of java, jee and Java Framework apps.</p> 
+ <b>2. Q : WHAT ARE THE MAIN FEATURES OF HIBERNATE?</b>
+ <p>ANS :
+<ul>
+<li>1.     Hibernate gives HQL (Hibernate Query Language) as DataBase Software Independent.</li>
+
+<li>2.    Hibernate supports lazy loading.</li>
+
+<li>3.     Allows to develop objects based persistence logic in standalone environment and also in web application environment.</li>
+
+<li>4.    Does not need the heavy weight containers , servers to execute Hibernate Code.</li>
+
+<li>5.    Hibernate O-R Mapping solve the mismatches between java programming and DataBase Programming.</li>
+
+<li>6.    Hibernate support both XML and annotation based O-R Mapping configuration.</li>
+
+<li>7.    It supports two levels of caching to reduce network round trips between hibernate app and Database software. ( cache is a temporary memory that hold data for temporary period).</li>
+
+<li>8.    Hibernate supports versioning. (Allows to keep track of how many times the object/Record is modified).</li>
+
+<li>9.    Supports Timestamping feature. ( Keep track of when object/ Record is saved or modified with date and time values)</li>
+
+<li>10.Give supports to Native SQL queries to develop persistence logics.</li>
+
+<li>11.Supports object level relationship like one-to-one, one-to-many, many-to-one, many-to-many.</li>
+
+<li>12.Since Hibernate allows to develop object based database software independent persistence logic , we can change DB software in the middle of development / production environment.</li>
+</ul>
+</P>
+<b>3. Q : WHAT IS HIBERNATE CONFIGURATION FILE ?</b>
+<p>
+ANS :
+
+           It is the file that contains information to establish connection with database software and to provide instructions to Hibernate Framework.
+
+
+<br><br>This file contains 3 types of details :
+<ul>
+
+<li>
+1.    Connection Properties.
+</li><li>
+2.    Hibernate Properties.
+</li><li>
+3.    Hibernate Mapping file names.
+</li>
+</ul>
+</p>
+
+<b>4. Q : WHAT ARE THREE CORE CONCEPTS OF HIBERNATE FRAMEWORK?</b>
+<p>
+ANS : 
+<ul><li>
+     1.    Configuration
+  </li>
+<li>
+     2.    SessionFactory
+  </li>
+<li>
+     3.    Session</li></ul>
+  
+  
+ <b> 1. CONFIGURATION : </b>
+<br>
+                                      When Hibernate Configuration object is created , Hibernate framework will be activated based on the jar file that ar e added to classpath or buildpath.
+
+
+
+<br>This object also reads data and verifies given configuration file and mapping file enteries and stores the information as "in-memory metadata" at RAM-Level in form of Hashmap object.
+
+
+
+<br>Now onwards if configuration file , mapping file information required during execution of application . It will collect from that "In-Memory metadat" (Hashmap) instead of going those physical XML files.
+
+
+
+<br>Example : 
+
+<br>-----------     
+
+<br>// Activate Hibernate Framework
+
+<br>Configuration cfg = new Configuration();
+
+<br>//Verify and Read both configuration file  ,Mapping file data and store the data as in memory metadata
+
+<br>cfg = cfg.configure("/hibernate.cfg.xml");
+
+
+<br><br>
+<b>2. SESSIONFACTORY  :</b>
+
+                         <br>                   It will be created based on Configuration object. This Object holds connection properties, hibernate configuration file information, mapping file information and other details so it is called heavy weight object in Hibernate programming.
+
+
+
+<br>It is immutable object. i.e. once the data placed in that object it can not be modified.
+
+
+
+<br>It is thread safe object because all immutable objects are thread safe objects bydefault.
+
+
+
+<br>It is a factory to create hibernate Session objects.
+
+
+
+<br>Example- :
+
+<br>-------------
+
+    <br>   SessionFactory factory = cfg.buildSessionfactory();
+
+
+<br><br>
+<b>3. SESSION :</b> 
+
+                   <br>    Sessionfactory object gets one connection object from its JDBC connection pool and uses that object to create Hibernate Session Object.
+
+
+
+<br>This object Open Connection between Java Application and DataBase Software through Hibernate Frameworks.
+
+
+
+<br>It is the base object for programmer to give persistence instructions to hibernate framework using Domain class objects.
+
+
+
+<br>It is not thread safe object bydefault.
+
+
+
+<br>Example :
+
+<br>------------
+
+    <br>             Session session = factory.openSession();
+  
+</p>
+
+<b>5. Q :  WHAT IS HIBERNATE DIALECT ?</b>
+<p>
+Ans :
+
+        It is an optional property of hibernate configuration file but it is recommended property to use.
+
+
+<br>It helps the Hibernate Framework to decide the destination DataBase Software to communicate.
+
+<br>It helps hibernate framework to generate optimized SQL as required for underlying DB Software.</p>
+</div>
+
+<div id="SPRING" class="tabcontent">
+  <h3 align="center"><u>SPRING INTERVIEW QUESTIONS AND ANSWERS</u></h3>
+  <br/><b>1.Q : WHAT IS SPRING FRAMEWORK ?</b>
+<p>ANS : Spring is an open source, light weight, loosely coupled, aspect oriented, dependency Injection 
+<br/> based java application framework to develop various applications.</p>
+<br/><br/>
+<b>2.Q : WHAT IS THE DIFFERENCE BETWEEN DEPENDENCY INJECTION AND DEPENDENCY LOOKUP ?</b>
+<p>ANS : DEPENDENCY LOOKUP : 
+<br/>==================<br/>If the resources class or object is searching and getting its dependent values from other resources
+<br/>then it is called dependency lookup. Here the resources pulls the dependent values.
+<br/>The way we get JDBC connection object from JDBC connection pool is called Dependency Lookup.
+
+<br/><br/>
+Dependency Injection : <br/>
+===================<br/>
+If the under lying server/container/framework assign the values to resources/class/object dynamically 
+at runtime then it is called Dependency Injection.
+<br/>Here dependent values will be pushed to resource.
+<br/><br/>JVM calling constructor automatically to assign initial values to the object when the object is created.
+
+</p>
+<br/><br/>
+<b>3. Q: WHAT IS SPRING BEAN ? </b>
+<p>The Java class whose object is managed by spring container is called Spring Bean.</p>
+
+<b>4. Q : WHAT IS IOC ? </b>
+<p>ANS : Inversion Of Control As name specified , it inverted the control for creating the object by using new keyword to container. It is used for collaborating the objects and managing the dependencies between objects.</p>
+
+<b>5. Q : What is design pattern ? And How to implement Strategy Design Pattern?</b>
+<p>ANS :  Design Pattern are set of rules which come as best solution for reoccurring problems of application development. <br/>
+<br/> Design Patterns are best practices for utilizing software languages , Technologies and framework effectively in application development.<br/><br/>
+Example : Singleton, Factory etc.<br/><br/>
+Strategy Design Pattern : <br/>
+=====================<br/><br/>
+While developing multiple classes having dependency it is recommended to follow this design pattern. <br/>
+This pattern is not spring pattern . It can be used any where . Since the spring manages the dependency between classes , It is recommended to use this pattern while developing spring apps.<br/><br/>
+Strategy Implementation is all about implementing 3 principles : <br/><br/>
+<ul> 
+<li>1. Prefer composition over inheritance.</li>
+<li>2. Always code to Interfaces and never code with Implementations.</li>
+<li>3. Code should be open for extension and must be closed for modification</li>
+</ul>
+</p>
+
+<b>6. Q: When should we go for Setter Injection and When should we go for Constructor Injection ? </b>
+<p>ANS : If bean class contains only one property or if all properties of bean class should proper participate in dependency injection , then we should go for Constructor Injection, because this injection is bit faster than Setter Injection.
+<br/><br/>
+If bean class contains more than one property and there is no need of making all properties participating dependency injection then we need to go for Setter Injection. </p>
+
+<b>7. Q: What is the difference between Setter Injection and Constructor Injection ? </b>
+<p><table style="width:100%" border : 1px>
+<tr><th> Setter Injection </th><th>Constructor Injection </th><tr>
+<tr><td> Perform Injection after creating bean class object . So it is bit delayed Injection.</td>  <td>It perform Injection while creating bean class object , so no delayed. </td></tr>
+<tr><td>Support Cyclic dependency. </td>  <td> Doesn't support</td></tr>
+<tr><td> <property> tag is required.</td>  <td> <Constructor -arg> tag is required.</td></tr>
+<tr><td>To perform Setter Injection on n-properties in all angles n-setter methods are required. </td>  <td> To perform constructor Injection on n-properties in all angles n! Factorial constructors are required.</td></tr>
+<tr><td> If all properties are configured for Setter Injection then container creates bean class object using 0-param Constructor.</td>  <td>If any property is configured for Constructor Injection container creates bean class object using parameterized Constructor. </td></tr>
+ </table> </p>
+
+<b>8. Q : What is Singleton class and when we should create Singleton class ?</b>
+<p>ANS : The Java class that allow us to create only 1 object per JVM is called Singleton Java class.
+
+<br/> <br/>
+Take Singleton class in the following statements : <br/> <br/>
+<ul>
+<li> a. If a class is not having any state (Member Variable)</li>
+<li> b. If a class is shareable only read only state ( final variables)</li>
+<li> c. If a class is having huge amount of state and performing write operations on that star is synchronized manner. (1 thread at a time )</li>
+ </ul>
+Instead of creating multiple objects with same data or no data create 1 object and use it for multiple times . For this takes class as Singleton Java class.
+</p>
+
+<b>9. Q : How many types of bean scopes in spring ? </b>
+<p>ANS : We can make IOC container keeping our spring bean class object in different scopes .<br/>
+Spring has 5 scopes : 
+<br/><br/>
+<ul>
+<li>1. Singleton</li>
+<li>2. Prototype</li>
+<li>3. Seasion</li>
+<li>4. Request</li>
+<li>5. Global Session</li>
+</ul>
+<br/>
+Default scope for bean is singleton.
+</p>
+<b>10. WHAT IS WIRING IN SPRING ? TYPES OF WIRING. </b>
+<p> ANS : Configuring beans and their dependency injection in bean configuration file is called wiring.<br/>
+Types Of Wiring : <br/><br/>
+<ul>
+<li>1. Explicit Wiring</li>
+<li>2. Implicit/Auto Wiring</li>
+</ul>
+1. Explicit Wiring : <br/>
+==============<br/>
+Here we use '<'property'>', '<'constructor-arg'>' tags for dependency injection.
+<br/>
+2. Auto Wiring : <br/>
+===========<br/>
+Here the IOC container automatically detects dependents and injects them to target objects. Here no  <property>, <constructor-arg> tags are required.
+<br/><br/>
+<ul>
+<li>a. Can be used only to inject but not the simple values.</li>
+<li>b. If IOC container multiple dependencies to inject then ambiguity problem may raise.</li>
+<li>c. Kill the readability of XML file, so the bug fixing becomes very complex.</li>
+</ul>
+<br/>
+There are four types of autowiring :
+<br/><br/>
+<ul>
+<li>1. byName</li>
+<li>2. byType</li>
+<li>3. constructor</li>
+<li>4. autodetect</li>
+</ul>
+</p>
+<b>11. Q : Explain Types of Autowiring ?</b>
+<p>1. byName : <br/>
+==========<br/>
+Perform setter Injection.<br/>
+For this target class property name and dependent class bean I'd must match.<br/>
+Here is no possibility of ambiguity problem.
+<br/>
+Organisation.java<br/>
+==============
+<br/>
+Public class Organisation {<br/>
+ private Employee emp;<br/>
+Public Organisation () {<br/>}<br/>
+Public Organisation (Employee emp) {<br/>this.emp = emp;<br/>}<br/>}
+<br/><br/>
+public class Employee { <br/>
+ private string name;<br/>
+}<br/><br/>
+ApplicationContext.xml<br/>
+===================<br/>
+'<'bean id = "emp" class = "com.beans.Employee"'>'<br/>
+'<'property name ="name" value = "Kiran"/'>'
+<br/>
+'<'bean id = "org" class ="com.beans.Organisation" autowire="byName"'>'<br/>
+
+TestApp.java<br/>
+==========<br/>
+Organisation org = (Organisation) factory.getBean("org");
+
+<br/><br/>
+2. byType : <br/>
+=========<br/>
+1. performs setter injection.<br/>
+2. For this target class property type and dependent class must be match or must be compatible with each other.
+<br/>3. There is a possibility of getting ambiguity problem.<br/>
+
+EXAMPLE : <br/>
+========<br/>
+'<'bean id ="emp" class = "com.beans.Employee"'>'
+<br/>......<br/>
+'<'/bean'>'<br/>
+'<'bean id ="org" class="com.beans.Organisation" autowire="byType"'>'<br/>
+NOTE:<br/>
+====<br/>
+If we configure Employee class 1 more time in spring bean configuration file with different bean id then we get ambiguity problem.<br/><br/>
+3. constructor :<br/>
+=============<br/>
+1. Uses parameterized constructor to perform constructor injection.<br/>
+There is a possibility of getting ambiguity problem if multiple dependencies are found.But it doesn't throw exception If target class contains 0-param constructor
+otherwise exception will be thrown.<br/><br/>
+EXAMPLE :<br/>
+========<br/>
+'<'bean id ="emp" class = "com.beans.Employee"'>'<br/>
+...........<br/>
+'<'/bean'>'<br/>
+'<'bean id ="org" class ="com.beans.Organisation" autowire ="constructor"'>'<br/><br/>
+4.autodetect :<br/>
+============<br/>
+If target class contains 0-param constructor the it performs byType mode autowiring.<br/>
+If target class contains parameterized constructor then it performs constructor mode wiring.<br/>
+Removed from spring 3.0 onwards.<br/>
+EXAMPLE : <br/>
+=========<br/>
+'<'bean id ="emp" class="com.beans.Employee"'>'<br/>
+........<br/>
+'<'/bean'>'
+'<'bean id="org" class="com.beans.Organisation" autowire="autodetect"'>'<br/><br/>
+4.autowire = "no" :<br/>
+============<br/>
+Disable autowiring.
+</p>
+</div>
+
+<div id="ABOUTUS" class="tabcontent">
+  <h3 align="center"><u>APACHE KAFKA INTERVIEW QUESTIONS AND ANSWERS</u></h3>
+  <b>Q : WHAT IS AN APACHE KAFKA ?</b>
+<p>ANS : Apache Kafka is a distributed streaming platform.
+ A Streaming platform has three capabilities:
+ <ul>
+ <li/>1. Publish and Subscribes streams of records , similar to a message queue or enterprise messaging system.</li>
+ <li>2. Store streams of record in a fault tolerant(continues working even when there is something wrong or failure) durable way.</li>
+ <li>3.Process streams of records as they occur.</li>
+ </ul>
+ use Cases :
+ =========
+ <ul>
+ <li>a. Building real-time streaming data pipelines that reliably get data between systems or applications.</li>
+ <li>b. Building real-time streaming applications that transform to the streams of data.</li>
+ </ul>
+ </p><br/><br/>
+ 
+ <b>Q: What are the Core APIs of Kafka?</b>
+ <p>ANS : 
+ <ul>
+ <li>Producer API</li>
+ <li>Consumer API</li>
+ <li>Stream API</li>
+ <li>Connector API</li>
+ </ul>
+ <ul>
+ <li>1. Producer API : It allows an application to publish a stream of records to one or more topics.</li>
+ <li>2. Consumer API : It allows an application to subscribe to one or more topics and process the stream of records produced to them.</li>
+ <li>3. Stream API : It allows an application to act as stream processor, consuming an input stream from one or more topics and producing an output stream to one or more output topics
+ , effectively transforming the input stream to output streams.</li>
+ <li>4. Connector API : It allows building and running reusable producers or consumers that connect kafka topics to existing application or data systems.
+    For Example , a connector to a relational database might capture every change to a table.</li></ul>
+ </p><br/><br/>
+<b>Q: What is the TOPIC in Kafka ?</b>
+<p>ANS : A Topic is a category name to which records are published . Topics in kafka are always multi subscriber i.e. a topic can have 0 or more consumers that can 
+     Subscribe to the topic. </p><br/><br/>
+  
+<b>Q : What is different about Kafka is that it is a very good storage system.</b>
+<p>ANS : Data written to Kafka is written to disk and replicated for fault-tolerance. Kafka allows producers to wait on acknowledgment
+ so that a write isn't considered complete until it is fully replicated and guaranteed to persist even if the server written to fails.<br/>
+
+The disk structures Kafka uses scale well—Kafka will perform the same whether you have 50 KB or 50 TB of persistent data on the server.<br/>
+
+As a result of taking storage seriously and allowing the clients to control their read position, you can think of Kafka as a kind of 
+special purpose distributed file system dedicated to high-performance, low-latency commit log storage, replication, and propagation.
+</p><br/><br/>
+
+<b>Q : WHAT IS STREAM PROCESSING IN KAFKA?</b>
+<p>ANS : It isn't enough to just read, write, and store streams of data, the purpose is to enable real-time processing of streams.
+      In Kafka a stream processor is anything that takes continual streams of data from input topics,
+   performs some processing on this input, and produces continual streams of data to output topics. 
+   Used with real-time streaming applications like Apache Spark & Storm.
+   Kafka with proper configurations can ensure zero data loss.
+</p><br/><br/>   
+<b>Q : What are the various components in Kafka ?</b>
+<p>ANS : The four major components of Kafka are:
+<ul>
+<li>Topic : A stream of messages belonging to the same type.</li>
+<li>Producer : That can publish messages to a topic.</li>
+<li>Brokers – A set of servers where the publishes messages are stored.</li>
+<li>Consumer – That subscribes to various topics and pulls data from the brokers.</li>
+</ul>
+</p><br/><br/>
+
+<b>Q.:  What is a Consumer Group in Kafka?</b>
+<p>ANS : Consumer Groups is a property of Kafka.  Every Kafka consumer group consists of one or more consumers that jointly consume a set of subscribed topics.</p>
+<br/><br/>
+<b>Q. : What is the role of the ZooKeeper?</b>
+<p>ANS : Zookeeper is mainly used to maintain the state of Kafka.
+Kafka uses Zookeeper to store offsets of messages consumed for a specific topic and partition by a specific Consumer Group.</p><br/><br/>
+
+<b>Q :Is it possible to use Kafka without ZooKeeper?</b>
+<p>ANS : No, it is not possible to bypass Zookeeper and connect directly to the Kafka server. If zookeeper is down you cannot send any request to kafka.</p><br/><br/>
+
+<b>Q : What is the process for starting a Kafka server?</b>
+<p>ANS : kafka uses ZooKeeper, s0, it is essential to initialize the ZooKeeper server, and then start up the Kafka server.</p><br/><br/>
+
+<b>Q : WHAT IS THE ROLE OF LEADER AND FOLLOWER IN KAFKA ?</b>
+<p>ANS : Every partition in Kafka has one server which plays the role of a Leader to read and write requests for the partition . while the role of the Followers is to passively replicate the leader. 
+      In case of the Leader failing, one of the Followers will take on the role of the Leader. This ensures load balancing of the server.</p><br/><br/>
+   
+<b>Q : Why are Replications critical in Kafka?</b>
+<p>ANS : Replication ensures that published messages are not lost and can be consumed in case of any machine error, program error or frequent software upgrades.</p><br/><br/>
+
+<b>Q. : In the Producer, when does QueueFullException occur?</b>
+<p>ANS : QueueFullException typically occurs when the Producer attempts to send messages at a pace that the Broker cannot handle. 
+Since the Producer doesn’t block, users will need to add enough brokers to collaboratively handle the increased load.</p><br/><br/>
+
+<b>Q. : How do you define a Partitioning Key?</b>
+<p>ANS : Within the Producer, the role of a Partitioning Key is to indicate the destination partition of the message.
+     By default, a hashing-based Partitioner is used to determine the partition ID given the key. Alternatively, users can also use customized Partitions.</p><br/><br/>
+  
+<b>Q.: How to balance loads in Kafka when one server fails?</b>
+<p>ANS : Every partition in Kafka has one main server that plays the role of a leader and one or more non-connected servers that are named as the followers.
+      Here, the leading server sets the permission and rest of the servers just follow him accordingly.
+   In case, leading server fails then followers take the responsibility of the main server.</p><br/><br/>
+   
+<b>Q : Do you know any traditional technique of message transfer?</b>
+<p>ANS : Yes, queuing, and publish-subscribe. However, Kafka generalizes both of the techniques through consumer group.</p><br/><br/>
+
+<b>Q : What is the maximum size of a message that can be received by the Kafka?</b>
+<p>ANS : It is approx. 1000000 bytes.</p><br/><br/>
+
+<b>Q: Do replication is necessary or just a waste of time in Kafka?</b>
+<p>ANS : Replicating messages is a good practice in Kafka that assure that messages will never lose even if the main server fails.</p><br/><br/>
+
+<b>Q : In the producer, when there comes the situation of queue fullness?</b>
+<p>ANS : If there are not enough number of servers added for load balancing, there comes a situation of queue fullness.</p><br/><br/>
+
+<b>Q : Explain the Kafka architecture?</b>
+<p>ANS : Kafka product is based on a distributed design where one cluster has multiple brokers/servers associated with it.
+ The ‘Topic’ will be divided into plenty of partitions to store the messages and there is one consumer group to fetch the messages from brokers.</p>
+
+</div>
+
+<div id="APACHESTORM" class="tabcontent">
+  <h3 align="center"><u>APACHE STORM INTERVIEW QUESTIONS AND ANSWERS</u></h3>
+
+<b>1. Q : WHAT IS APACHE STORM ? </b>
+<p>ANS : Apache Storm is a distributed real-time big data-processing system that is used for Real-time stream processing. Storm is designed to process vast amount of data in a fault-tolerant and horizontal scalable method. 
+Storm is stateless, it manages distributed environment and cluster state via Apache ZooKeeper.  It is simple and you can execute all kinds of manipulations on real-time data in parallel.
+Storm guarantees that every message will be processed through the topology at least once.</p>
+
+<b>2. WHAT ARE THE CORE COMPONENTS OF APACHE STORM ?</b>
+<p><ul><li>1. Tuple</li><li>2. Stream</li><li>3. Spouts</li><li>4. Bolts</li></ul>
+<br/><br/>
+1. Tuple : <br/>
+========<br/>
+Tuple is the main data structure in Storm. It is a list of ordered elements. It supports all data types. It is modelled as a set of comma separated values and passed to a Storm cluster.
+<br/><br/>
+2. Stream :<br/>
+========<br/>Stream is an unordered sequence of tuples.<br/><br/>
+3.Spouts :<br/>
+=========<br/>
+Source of stream. Storm accepts input data from raw data sources like Twitter Streaming API, Apache Kafka queue etc. Otherwise you can write spouts to read data from datasources. “ISpout" is the core interface for implementing spouts. Some of the specific interfaces are IRichSpout, BaseRichSpout, KafkaSpout, etc.
+<br/><br/>
+4. Bolts :<br/>
+========<br/>
+Bolts are logical processing units. Spouts pass data to bolts and bolts process and produce a new output stream. Bolts can perform the operations of filtering, aggregation, joining, interacting with data sources and databases. Bolt receives data and emits to one or more bolts. “IBolt” is the core interface for implementing bolts. Some of the common interfaces are IRichBolt, IBasicBolt, etc.
+<br/>
+</p>
+</div>
+ <script>
+document.getElementById("defaultOpen").click();
+ </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- New Ad Unit -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1866019745595988"
+     data-ad-slot="5582224893"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html> 
+
